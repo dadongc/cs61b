@@ -58,7 +58,6 @@ public class NBody {
       StdDraw.show();
       StdDraw.pause(1);
     }
-    System.out.println("out");
     StdOut.printf("%d\n", planets.length);
     StdOut.printf("%.2e\n", radius);
     for (int i = 0; i < planets.length; i++) {

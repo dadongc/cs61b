@@ -1,10 +1,10 @@
 public class Planet {
-  double xxPos;
-  double yyPos;
-  double xxVel;
-  double yyVel;
-  double mass;
-  String imgFileName;
+  public double xxPos;
+  public double yyPos;
+  public double xxVel;
+  public double yyVel;
+  public double mass;
+  public String imgFileName;
 
   public Planet(double xP, double yP, double xV, double yV, double m, String img) {
     xxPos = xP;
@@ -39,7 +39,7 @@ public class Planet {
       return 0;
     }
     double force = calcForceExertedBy(p);
-    double forceX = force * Math.abs(this.xxPos - p.xxPos) / calcDistance(p);
+    double forceX = force * (p.xxPos - this.xxPos) / calcDistance(p);
     return forceX;
   }
 
@@ -48,7 +48,7 @@ public class Planet {
       return 0;
     }
     double force = calcForceExertedBy(p);
-    double forceY = force * Math.abs(this.yyPos - p.yyPos) / calcDistance(p);
+    double forceY = force * (p.yyPos - this.yyPos) / calcDistance(p);
     return forceY;
   }
 
@@ -76,7 +76,7 @@ public class Planet {
     return -netForceY;
   }
 
-  public boolean equals(Planet p) {
+  private boolean equals(Planet p) {
     return xxPos == p.xxPos 
     && yyPos == p.yyPos 
     && xxVel == p.xxVel 
