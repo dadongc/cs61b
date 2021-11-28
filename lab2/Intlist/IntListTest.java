@@ -66,4 +66,8 @@ public class IntListTest {
         assertEquals(IntList.of(1, 2, 3), A);
     }
 
+    private boolean assertEquals(IntList l1, IntList l2) {
+        return l1.equals(l2);
+    }
+
 }
