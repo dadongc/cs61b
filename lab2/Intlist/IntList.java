@@ -90,7 +90,7 @@ public class IntList {
             tmp = tmp.rest;
         }
         tmp.rest = B;
-        return null;
+        return A;
     }
 
     /**
