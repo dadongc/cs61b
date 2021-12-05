@@ -2,25 +2,29 @@ public class LinkedListDeque<T> {
     private int size;
     private Node head;
     private Node tail;
+
     private class Node {
-        public T item;
-        public Node next;
-        public Node prev;
+        private T item;
+        private Node next;
+        private Node prev;
+
         public Node(T item, Node next, Node prev) {
             this.item = item;
             this.next = next;
             this.prev = prev;
         }
+
         public Node() {
             item = null;
             next = null;
             prev = null;
         }
+
         public T getItem(int index) {
             if (index == 0) {
                 return item;
             }
-            return this.next.getItem(index-1);
+            return this.next.getItem(index - 1);
         }
     }
 
@@ -55,10 +59,11 @@ public class LinkedListDeque<T> {
 
     public void printDeque() {
         Node tmp = head;
-        for (int i = 0;i < size;i++) {
+        for (int i = 0; i < size; i++) {
             System.out.println(tmp.next.item);
             tmp = tmp.next;
-        };
+        }
+        ;
     }
 
     public T removeFirst() {
@@ -88,7 +93,7 @@ public class LinkedListDeque<T> {
             return head.item;
         }
         Node tmp = head.next;
-        for(int i = 0;i < index;i++) {
+        for (int i = 0; i < index; i++) {
             tmp = tmp.next;
         }
         return tmp.item;
