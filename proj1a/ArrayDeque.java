@@ -1,11 +1,11 @@
 import java.util.Arrays;
 
 public class ArrayDeque<E> {
-    private Object[] items;
+    private E[] items;
     private int size;
 
     public ArrayDeque() {
-        items = new Object[8];
+        items = (E[]) new Object[8];
         size = 0;
     }
 
