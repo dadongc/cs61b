@@ -85,4 +85,5 @@ public class ArrayDeque<E> {
         a[0] = 0;
         System.out.println(Arrays.toString(a));
     }
+
 }
